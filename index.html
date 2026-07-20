@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <!-- 1. EXTERNAL CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 2. INTERNAL CSS -->
+  <style>
+    .highlight { color: #2563eb; font-weight: 600; }
+    .photo-name-tag { font-size: 0.85rem; color: #555; text-align: center; }
+    .skill-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 4px; }
+    .skill-group-label { font-size: 0.82rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2563eb; margin-bottom: 6px; }
+    .skill-group { background-color: #ffffff; border: 1px solid #e8eaf0; border-radius: 8px; padding: 16px 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
+    .contact-page-heading { font-size: 1.3rem; font-weight: 700; color: #1a1a2e; margin-bottom: 4px; }
+    .contact-page-sub { font-size: 0.85rem; color: #64748b; margin-bottom: 28px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- Hidden radio inputs — CSS-only tab control (no JS) -->
+  <input type="radio" name="tab" id="tab-profile"  class="tab-radio" checked />
+  <input type="radio" name="tab" id="tab-projects" class="tab-radio" />
+  <input type="radio" name="tab" id="tab-links"    class="tab-radio" />
+  <input type="radio" name="tab" id="tab-contact"  class="tab-radio" />
+
+  <!-- HEADER -->
+  <header class="header">
+    <div>
+      <div class="name">MANO RANJAN G</div>
+      <!-- 3. INLINE CSS -->
+      <div class="tagline" style="color:#2563eb; font-size:1.05rem; margin-top:5px;">
+        Aspiring Data Scientist
+      </div>
+    </div>
+    <!-- Enquiry button top-right -->
+    <a href="login.html" style="
+      display: inline-block;
+      padding: 10px 22px;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      box-shadow: 0 3px 12px rgba(37,99,235,0.4);
+      transition: background-color 0.2s;
+    ">✉ Enquiry</a>
+  </header>
+
+  <!-- BODY -->
+  <div class="body-layout">
+
+    <!-- SIDEBAR — labels act as nav buttons -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li>
+            <label for="tab-profile" class="nav-label" id="lbl-profile">👤 Profile</label>
+          </li>
+          <li>
+            <label for="tab-projects" class="nav-label" id="lbl-projects">🗂 Projects</label>
+          </li>
+          <li>
+            <label for="tab-links" class="nav-label" id="lbl-links">🔗 Links</label>
+          </li>
+          <li>
+            <label for="tab-contact" class="nav-label" id="lbl-contact">✉️ Contact</label>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- PANEL 1: PROFILE -->
+      <div class="page-panel" id="profile-panel">
+
+        <!-- TOP ROW: About Me text (left) + Photo (right) -->
+        <div class="profile-top-row">
+          <div class="about-col">
+            <div class="section-title">About Me</div>
+            <div class="about-text">
+              <p> Hello, I'm <span class="highlight">Mano Ranjan G</span>, an
+              <span class="highlight">Aspiring Data Scientist</span>
+                Artificial Intelligence and Data Science student at KPR Institute of Engineering and Technology and an aspiring Data Scientist. I am passionate about Data Analytics, Machine Learning, Python, and SQL, with a strong interest in extracting meaningful insights from data. I continuously learn new technologies and build projects that enhance my analytical and problem-solving skills, aiming to create impactful data-driven solutions</p>
+            </div>
+          </div>
+          <div class="profile-photo-col">
+            <div class="photo-frame">
+              <img src="https://i.postimg.cc/tTwXspJR/Mano-Ranjan-G.jpg" alt="Profile Photo" />
+            </div>
+            <p class="photo-name-tag" style="font-weight:700; color:#1a1a2e; font-size:0.97rem; margin-top:12px;">Mano Ranjan G</p>
+            <p class="photo-name-tag" style="margin-top:4px;">Aspiring Data Scientist</p>
+            <a href="24AD061_MANO RANJAN G.pdf" target="_blank" style="display:inline-block; margin-top:14px; padding:9px 20px; background-color:#2563eb; color:#ffffff; font-size:0.82rem; font-weight:600; border-radius:8px; text-decoration:none; text-align:center; box-shadow:0 3px 10px rgba(37,99,235,0.3);">
+              📄 View Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- FULL WIDTH SECTIONS BELOW -->
+        <div class="info-section">
+
+          <hr class="section-divider" />
+
+          <section style="margin-bottom:24px;">
+            <div class="section-title">Education</div>
+            <div style="background:#fff; border:1px solid #e8eaf0; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+              <table class="edu-table">
+                <thead>
+                  <tr>
+                    <th>📚 Qualification</th>
+                    <th>🏫 Institution</th>
+                    <th>📅 Year</th>
+                    <th>📋 Board</th>
+                    <th>🏅 Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>B.Tech AI &amp; Data Science</strong></td>
+                    <td>KPR Institute of Engineering and Technology</td>
+                    <td>2024 – 2028</td>
+                    <td>Autonomous</td>
+                    <td><span class="grade-badge grade-a">8.42 CGPA</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>HSC (Class XII)</strong></td>
+                    <td>Kongu Vellalar Matric Hr. Sec. School</td>
+                    <td>2024</td>
+                    <td>State Board</td>
+                    <td><span class="grade-badge grade-o">80%</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>SSLC (Class X)</strong></td>
+                    <td>AVP Trust Matric Hr. Sec. School</td>
+                    <td>2022</td>
+                    <td>State Board</td>
+                    <td><span class="grade-badge grade-b">74%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <hr class="section-divider" />
+
+          <section style="margin-bottom:24px;">
+            <div class="section-title">Technical Skills</div>
+            <div class="skill-columns">
+              <div class="skill-group">
+                <div class="skill-group-label">Languages</div>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">C Programming</span>
+                <span class="skill-tag">Java</span>
+              </div>
+              <div class="skill-group">
+                <div class="skill-group-label">Frameworks &amp; Tools</div>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Flask</span>
+                <span class="skill-tag">Git &amp; GitHub</span>
+                <span class="skill-tag">VS Code</span>
+              </div>
+              <div class="skill-group">
+                <div class="skill-group-label">Concepts</div>
+                <span class="skill-tag">Machine Learning</span>
+                <span class="skill-tag">OOP</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">DBMS</span>
+              </div>
+              <div class="skill-group">
+                <div class="skill-group-label">Soft Skills</div>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Teamwork</span>
+                <span class="skill-tag">Communication</span>
+              </div>
+            </div>
+          </section>
+
+          <hr class="section-divider" />
+
+          <section style="margin-bottom:24px;">
+            <div class="section-title">Areas of Interest</div>
+            <div style="background:#fff; border:1px solid #e8eaf0; border-radius:8px; padding:14px 16px; box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+              <span class="interest-tag">Artificial Intelligence</span>
+              <span class="interest-tag">Data Science</span>
+              <span class="interest-tag">Data Visualization</span>
+              <span class="interest-tag">Machine Learning</span>
+            </div>
+          </section>
+
+          <hr class="section-divider" />
+
+          <section style="margin-bottom:24px;">
+            <div class="section-title">Certifications</div>
+            <div class="cert-grid">
+              <div class="cert-card">
+                <div class="cert-name">SQL(Basic)</div>
+                <div class="cert-issuer">HackerRank</div>
+              </div>
+              <div class="cert-card">
+                <div class="cert-name">NPTEL - Responsible & Safe AI System</div>
+                <div class="cert-issuer">NPTEL</div>
+              </div>
+              <div class="cert-card">
+                <div class="cert-name">NPTEL - Data Analytics with Python</div>
+                <div class="cert-issuer">NPTEL</div>
+              </div>
+              <div class="cert-card">
+                <div class="cert-name">SQL (Advanced)</div>
+                <div class="cert-issuer">HackerRank</div>
+              </div>
+              <div class="cert-card">
+                <div class="cert-name">GEN AI Bootcamp Workshop</div>
+                <div class="cert-issuer">Algouniversity</div>
+              </div>
+              <div class="cert-card">
+                <div class="cert-name">Prototype Development</div>
+                <div class="cert-issuer">Unstop</div>
+              </div>
+            </div>
+          </section>
+
+
+
+        </div><!-- /.info-section -->
+
+      </div><!-- /#profile-panel -->
+
+      <!-- PANEL 2: PROJECTS -->
+      <div class="page-panel" id="projects-panel">
+        <div style="width:100%;">
+          <div style="margin-bottom:28px;">
+            <p class="contact-page-heading">My Projects</p>
+            <p class="contact-page-sub">A collection of projects I have built — spanning data science, web development, and AI.</p>
+            <hr class="section-divider" style="margin-top:0;" />
+          </div>
+          <div class="projects-grid">
+
+            <div class="project-card">
+              <div class="project-card-banner"></div>
+              <div class="project-card-body">
+                <div class="project-card-header">
+                  <span class="project-type-badge" style="background-color:#dcfce7; color:#15803d;">Full STack</span>
+                </div>
+                <div class="project-title">Skill Swap</div>
+                <div class="project-desc">Web application with Home, Login/Signup, and Profile pages. Profiles display skills, bio, and allow feedback &amp; ratings. Chatbot helps with doubts, discussions, and quizzes. Users teach and learn skills from each other in a mutual learning setup.</div>
+                <div class="project-tech-row">
+                  <span class="project-tech-tag">Python Flask</span>
+                  <span class="project-tech-tag">HTML</span>
+                  <span class="project-tech-tag">CSS</span>
+                  <span class="project-tech-tag">WebSocket</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/manoranjan-programmer/skill_swap-1.git" target="_blank" class="project-btn project-btn-primary">⬡ GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-banner" style="background:linear-gradient(90deg,#7c3aed,#a855f7,#c084fc);"></div>
+              <div class="project-card-body">
+                <div class="project-card-header">
+                  <span class="project-type-badge" style="background-color:#ede9fe; color:#6d28d9;">DBMS</span>
+                </div>
+                <div class="project-title">Student Enrollment &amp; Result Management</div>
+                <div class="project-desc">EduTrack is a PERN-stack academic platform that automates student enrollment, course registration, and result management through a secure, role-based interface. Features interactive data analytics with Chart.js and automated PDF transcript generation.</div>
+                <div class="project-tech-row">
+                  <span class="project-tech-tag">React.js</span>
+                  <span class="project-tech-tag">Node.js</span>
+                  <span class="project-tech-tag">PostgreSQL</span>
+                  <span class="project-tech-tag">PL/SQL</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/manoranjan-programmer/student_enrollment_mangament_system.git" target="_blank" class="project-btn project-btn-primary">⬡ GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-banner" style="background:linear-gradient(90deg,#0f766e,#14b8a6,#5eead4);"></div>
+              <div class="project-card-body">
+                <div class="project-card-header">
+                  <span class="project-type-badge" style="background-color:#ccfbf1; color:#0f766e;">Portfolio</span>
+                </div>
+                <div class="project-title">Personal Portfolio Website</div>
+                <div class="project-desc">Designed and developed a fully responsive personal portfolio using pure HTML, CSS — with tabbed navigation, a contact form, education board, project cards, and profile links. Demonstrates all 3 types of CSS.</div>
+                <div class="project-tech-row">
+                  <span class="project-tech-tag">HTML5</span>
+                  <span class="project-tech-tag">CSS3</span>
+                  <span class="project-tech-tag">Responsive Design</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/manoranjan-programmer/portfolio-website.git" target="_blank" class="project-btn project-btn-primary">⬡ GitHub</a>
+                <a href="https://manoranjan-portfolio.vercel.app" target="_blank" class="project-btn project-btn-secondary">▶ Live Demo</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-banner" style="background:linear-gradient(90deg,#b45309,#f59e0b,#fcd34d);"></div>
+              <div class="project-card-body">
+                <div class="project-card-header">
+                  <span class="project-type-badge" style="background-color:#fef3c7; color:#b45309;">AI Platform</span>
+                </div>
+                <div class="project-title">Idea to Startup Feasibility Predictor</div>
+                <div class="project-desc">An AI-powered platform that validates business concepts using API-driven LLMs. Analyzes Startup Title, Target Users, and Problem Statement — via text input or uploaded documents — to calculate a Feasibility Score and provide data-driven market insights.</div>
+                <div class="project-tech-row">
+                  <span class="project-tech-tag">React.js</span>
+                  <span class="project-tech-tag">Node.js</span>
+                  <span class="project-tech-tag">MongoDB Atlas</span>
+                  <span class="project-tech-tag">Supabase</span>
+                  <span class="project-tech-tag">Vercel</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/manoranjan-programmer/Idea-to-startup.git" target="_blank" class="project-btn project-btn-primary">⬡ GitHub</a>
+                <a href="https://idea-to-startup.vercel.app" target="_blank" class="project-btn project-btn-secondary">▶ Live Demo</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-banner" style="background:linear-gradient(90deg,#be123c,#f43f5e,#fb7185);"></div>
+              <div class="project-card-body">
+                <div class="project-card-header">
+                  <span class="project-type-badge" style="background-color:#ffe4e6; color:#be123c;">ML Model</span>
+                </div>
+                <div class="project-title">Rock Fall Prediction</div>
+                <div class="project-desc">Uses machine learning to identify areas with high rockfall risk. Analyzes terrain, slope, and environmental data for accurate predictions. Helps improve safety and early hazard detection in vulnerable regions.</div>
+                <div class="project-tech-row">
+                  <span class="project-tech-tag">Python</span>
+                  <span class="project-tech-tag">LSTM Model</span>
+                  <span class="project-tech-tag">Streamlit</span>
+                  <span class="project-tech-tag">Pandas</span>
+                  <span class="project-tech-tag">NumPy</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/manoranjan-programmer/rock_fall_predictions.git" target="_blank" class="project-btn project-btn-primary">⬡ GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-card-banner" style="background:linear-gradient(90deg,#0369a1,#0ea5e9,#7dd3fc);"></div>
+              <div class="project-card-body">
+                <div class="project-card-header">
+                  <span class="project-type-badge" style="background-color:#e0f2fe; color:#0369a1;">Data Analysis</span>
+                </div>
+                <div class="project-title">Climate Change Impact Assessment</div>
+                <div class="project-desc">Uses ML models to analyze how climate change factors — temperature, rainfall, soil conditions — affect agricultural productivity. Predicts crop yield trends, identifies climate risks, and helps make data-driven decisions for sustainable agriculture.</div>
+                <div class="project-tech-row">
+                  <span class="project-tech-tag">Python</span>
+                  <span class="project-tech-tag">Pandas</span>
+                  <span class="project-tech-tag">NumPy</span>
+                  <span class="project-tech-tag">Matplotlib</span>
+                  <span class="project-tech-tag">Jupyter</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a href="https://github.com/manoranjan-programmer/climate_change_impact_on_agriculture.git" target="_blank" class="project-btn project-btn-primary">⬡ GitHub</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /#projects-panel -->
+
+      <!-- PANEL 3: LINKS -->
+      <div class="page-panel" id="links-panel">
+        <div style="width:100%;">
+          <div style="margin-bottom:28px;">
+            <p class="contact-page-heading">My Profiles &amp; Links</p>
+            <p class="contact-page-sub">Find me on these platforms — click any card to visit my profile.</p>
+            <hr class="section-divider" style="margin-top:0;" />
+          </div>
+          <div class="links-grid">
+
+            <div class="link-card">
+              <div class="link-card-icon">🐙</div>
+              <div class="link-card-title">GitHub</div>
+              <div class="link-card-desc">Browse my repositories, open-source contributions, and personal projects.</div>
+              <a href="https://github.com/manoranjan-programmer" target="_blank" class="link-card-btn">Visit GitHub</a>
+            </div>
+
+            <div class="link-card">
+              <div class="link-card-icon" style="background-color:#e8f0fe;">💼</div>
+              <div class="link-card-title">LinkedIn</div>
+              <div class="link-card-desc">Connect with me professionally, view my experience and endorsements.</div>
+              <a href="https://www.linkedin.com/in/manoranjan-works/" target="_blank" class="link-card-btn">Visit LinkedIn</a>
+            </div>
+
+            <div class="link-card">
+              <div class="link-card-icon" style="background-color:#e8faf0;">🏅</div>
+              <div class="link-card-title">HackerRank</div>
+              <div class="link-card-desc">Explore my programming certifications and coding challenge achievements.</div>
+              <a href="https://www.hackerrank.com/profile/codermanoranjan" target="_blank" class="link-card-btn">Visit HackerRank</a>
+            </div>
+
+            <div class="link-card">
+              <div class="link-card-icon" style="background-color:#fff7ed;">🧩</div>
+              <div class="link-card-title">LeetCode</div>
+              <div class="link-card-desc">View my problem-solving stats, contest rankings, and accepted solutions.</div>
+              <a href="https://leetcode.com/u/codermanoranjan/" target="_blank" class="link-card-btn">Visit LeetCode</a>
+            </div>
+
+            <div class="link-card">
+              <div class="link-card-icon" style="background-color:#fef3e8;">👨‍🍳</div>
+              <div class="link-card-title">CodeChef</div>
+              <div class="link-card-desc">Check my competitive programming activity, ratings, and contest history.</div>
+              <a href="https://www.codechef.com/users/kpr24ad061" target="_blank" class="link-card-btn">Visit CodeChef</a>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /#links-panel -->
+
+      <!-- PANEL 4: CONTACT -->
+      <div class="page-panel" id="contact-panel">
+        <div style="width:100%;">
+          <div style="margin-bottom:28px;">
+            <p class="contact-page-heading">Get In Touch</p>
+            <p class="contact-page-sub">Feel free to reach out via any of the channels below, or send me a message directly using the form.</p>
+            <hr class="section-divider" style="margin-top:0;" />
+          </div>
+          <div class="contact-layout">
+
+            <div class="contact-info-col">
+              <div class="section-title">Contact Details</div>
+
+              <a href="tel:+916383956053" class="contact-info-card">
+                <div class="contact-card-icon">📞</div>
+                <div>
+                  <div class="contact-card-label">Phone</div>
+                  <div class="contact-card-value">+91 6383956053</div>
+                </div>
+              </a>
+
+              <a href="mailto:official.manoranjanworks@gmail.com" class="contact-info-card">
+                <div class="contact-card-icon">✉️</div>
+                <div>
+                  <div class="contact-card-label">Email</div>
+                  <div class="contact-card-value">official.manoranjanworks@gmail.com</div>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/manoranjan-works/" target="_blank" class="contact-info-card">
+                <div class="contact-card-icon">💼</div>
+                <div>
+                  <div class="contact-card-label">LinkedIn</div>
+                  <div class="contact-card-value">linkedin.com/in/manoranjan-works</div>
+                  <div class="contact-card-sub">Connect with me professionally</div>
+                </div>
+              </a>
+
+              <a href="https://github.com/manoranjan-programmer" target="_blank" class="contact-info-card">
+                <div class="contact-card-icon">🐙</div>
+                <div>
+                  <div class="contact-card-label">GitHub</div>
+                  <div class="contact-card-value">github.com/manoranjan-programmer</div>
+                  <div class="contact-card-sub">View my projects &amp; code</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="contact-form-col">
+              <div class="section-title">Send a Message</div>
+              <div class="contact-form-box">
+                <form action="mailto:official.manoranjanworks@gmail.com" method="get" enctype="text/plain">
+                  <div class="form-row" style="margin-bottom:14px;">
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label for="senderName">Your Name</label>
+                      <input type="text" id="senderName" name="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group" style="margin-bottom:0;">
+                      <label for="senderEmail">Email Address</label>
+                      <input type="email" id="senderEmail" name="email" placeholder="john@example.com" required />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="senderSubject">Subject</label>
+                    <input type="text" id="senderSubject" name="subject" placeholder="e.g. Job Opportunity / Collaboration" />
+                  </div>
+                  <div class="form-group">
+                    <label for="senderMessage">Message</label>
+                    <textarea id="senderMessage" name="body" placeholder="Write your message here..." required></textarea>
+                  </div>
+                  <!-- 3. INLINE CSS on button -->
+                  <button type="submit" class="send-btn" style="display:flex; align-items:center; justify-content:center; gap:8px;">
+                    <span>&#9993;</span> Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div><!-- /#contact-panel -->
+
+    </main>
+  </div><!-- /.body-layout -->
+
+</div><!-- /.wrapper -->
+</body>
+</html>

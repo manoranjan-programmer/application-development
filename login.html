@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquiry Login</title>
+
+  <!-- EXTERNAL CSS — same style.css used by portfolio -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+
+    <div class="login-icon">✉</div>
+    <p class="login-title">Enquiry Login</p>
+    <p class="login-sub">Enter your credentials to continue</p>
+
+    <form class="login-form" onsubmit="return false;">
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" />
+      </div>
+
+      <button type="button" class="submit-btn" onclick="checkLogin()">Login</button>
+
+      <p id="message"></p>
+
+    </form>
+
+    <a href="index.html" class="back-link">← Back to <span>Portfolio</span></a>
+
+  </div>
+
+  <script>
+    function checkLogin() {
+
+      // Correct username and password
+      const correctUsername = "admin";
+      const correctPassword = "12345";
+
+      // Get user input
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Check login
+      if (username === correctUsername && password === correctPassword) {
+        document.getElementById("message").innerHTML = "Login Successful!";
+        document.getElementById("message").style.color = "green";
+      } else {
+        document.getElementById("message").innerHTML = "Invalid Username or Password!";
+        document.getElementById("message").style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>
